@@ -1,0 +1,22 @@
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+
+}
+
+img, button {
+  display: block;
+  margin: 0 auto;
+}
+
