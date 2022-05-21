@@ -4,7 +4,6 @@ let deckId = ""
 fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
   .then(res => res.json()) 
   .then(data => {
-    console.log(data)
     deckId = data.deck_id
   })
   .catch(err => {
@@ -30,11 +29,11 @@ function drawTwo() {
       console.log(player2Val)
 
       if (player1Val > player2Val) {
-        document.querySelector('h3').innerText = "Player 1 Wins!"
+        document.querySelector('.result').innerText = "Player 1 Wins!"
       } else if (player1Val < player2Val) {
-        document.querySelector('h3').innerText = "Player 2 Wins!"
+        document.querySelector('.result').innerText = "Player 2 Wins!"
       } else {
-        document.querySelector('h3').innerText = "Time for WAR!"
+        document.querySelector('.result').innerText = "Time for WAR!"
       }
     })
 
